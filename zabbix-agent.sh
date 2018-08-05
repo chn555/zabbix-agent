@@ -15,3 +15,6 @@ sed -i -e "s/Hostname=Zabbix server/Hostname=$hostname/g" /etc/zabbix/zabbix_age
 
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
+
+
+echo "Done"
