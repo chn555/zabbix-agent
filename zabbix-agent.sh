@@ -2,7 +2,7 @@
 sed -i -e 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
 read -p "Enter hostname : " hostname
-echo $hostname > /etc/hostname
+echo "$hostname.localdomain" > /etc/hostname
 setenforce 0
 firewall-cmd --add-port=10050/tcp --permanent
 rpm -ivh https://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
